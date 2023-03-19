@@ -1,0 +1,23 @@
+﻿@namespace BlazorShared
+
+@if (StringList != null && StringList.Any())
+{
+ 
+        <ol>
+            @foreach (var item in StringList)
+            {
+                <li>@item</li>
+            }
+        </ol>
+
+    
+}
+
+@code {
+
+    /// <summary>
+    /// 列表
+    /// </summary>
+    [Parameter]
+    public List<string>? StringList { get; set; } 
+}
